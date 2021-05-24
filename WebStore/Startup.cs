@@ -14,6 +14,7 @@ namespace WebStore
 {
     public class Startup
     {
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -48,11 +49,13 @@ namespace WebStore
 
             app.UseAuthorization();
 
+            var greetings = Configuration["Greetings"];
+            
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapGet("/", async context =>
                 {
-                    await context.Response.WriteAsync("Hello world!");
+                    await context.Response.WriteAsync(greetings);
                 });
 
             });
