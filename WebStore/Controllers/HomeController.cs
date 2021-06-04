@@ -48,5 +48,7 @@ namespace WebStore.Controllers
             
             return View(employee);
         }
+
+        public IActionResult Blog() => View();
     }
 }
