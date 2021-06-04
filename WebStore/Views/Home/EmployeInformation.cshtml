@@ -1,14 +1,14 @@
 ﻿@model WebStore.Models.Employee
 
 @{
-    ViewData["Title"] = $"Карточка сотрудника {Model.LastName} { Model.FirstName}";
+    ViewData["Title"] = $"Employee details {Model.LastName} { Model.FirstName}";
 }
 
 <div class="container">
     <h1>@ViewData["Title"]</h1>
 
     <div>
-        <h4>Сотрудник</h4>
+        <h4>Employee</h4>
         <hr />
         <dl class="row">
             <dt class="col-sm-2">
@@ -45,7 +45,7 @@
     </div>
     <div>
         @*@Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) *@
-        <a href="/Home/Employees"> Назад к списку </a>
+        <a href="/Home/Employees"> Back to the list </a>
     </div>
 </div>
 
